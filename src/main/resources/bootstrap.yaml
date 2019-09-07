@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: betapp-notification-svc
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: default
+  datasource:
+    url: jdbc:mysql://${betapp-notification-svc.hostname}:${betapp-notification-svc.port}/${betapp-notification-svc.dbName}?useLegacyDatetimeCode=false&autoReconnect=true
+    username: ${betapp-notification-svc.username}
+    password: ${betapp-notification-svc.password}
